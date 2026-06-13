@@ -43,7 +43,7 @@ export default function FleetPage() {
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden">
         <Header />
         <div className="flex-1 overflow-y-auto p-6">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
               <h1 className="text-2xl font-bold text-slate-900">Live Fleet</h1>
               <p className="text-sm text-slate-500 mt-1">ติดตามยานพาหนะทั้งหมดแบบเรียลไทม์</p>

@@ -280,7 +280,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">
                     ชื่อ <span className="text-rose-500">*</span>
@@ -344,7 +344,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                     ผู้ติดต่อฉุกเฉิน
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">
                       ชื่อผู้ติดต่อ
@@ -399,7 +399,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                 <label className="text-sm font-medium text-slate-700">
                   ประเภทพนักงาน <span className="text-rose-500">*</span>
                 </label>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <button
                     onClick={() => update({ employmentType: "in-house" })}
                     className={`p-4 rounded-xl border text-sm font-medium transition-all ${
@@ -453,7 +453,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                 <label className="text-sm font-medium text-slate-700">
                   ตำแหน่ง <span className="text-rose-500">*</span>
                 </label>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {roles.map((role) => (
                     <button
                       key={role.id}
@@ -515,7 +515,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                       ))}
                     </select>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-slate-700">
                         เลขที่บัญชี <span className="text-rose-500">*</span>
@@ -561,7 +561,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                     ใบขับขี่
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">
                       เลขใบขับขี่ <span className="text-rose-500">*</span>
@@ -589,7 +589,7 @@ export default function EmployeeModal({ isOpen, onClose, onSave }: EmployeeModal
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">
                       วันออกบัตร

@@ -108,7 +108,7 @@ export default function DriverApp() {
   return (
     <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
       {/* Phone Frame */}
-      <div className="w-full max-w-md h-[800px] bg-white rounded-[2rem] shadow-2xl border-4 border-gray-900 overflow-hidden flex flex-col relative">
+      <div className="w-full max-w-md h-[85vh] max-h-[800px] bg-white rounded-[2rem] shadow-2xl border-4 border-gray-900 overflow-hidden flex flex-col relative">
         {/* Notch */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-50" />
 

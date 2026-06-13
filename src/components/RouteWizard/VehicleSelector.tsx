@@ -79,7 +79,7 @@ export default function VehicleSelector({ vehicles, selectedId, onSelect }: Vehi
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 mt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2">
                 <ReadinessIndicator
                   label="เช็คระยะ"
                   date={vehicle.maintenanceDue}

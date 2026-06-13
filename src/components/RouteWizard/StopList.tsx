@@ -179,7 +179,7 @@ export default function StopList({ stops, customers, onUpdate }: StopListProps) 
             </select>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="space-y-2">
               <label className="text-xs font-medium text-slate-600">ประเภท</label>
               <div className="flex gap-2">

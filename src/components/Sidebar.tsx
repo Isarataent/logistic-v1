@@ -1,5 +1,8 @@
-import { Truck, MapPin, Users, AlertTriangle, Settings, LayoutDashboard } from "lucide-react";
+"use client";
+
+import { Truck, MapPin, Users, AlertTriangle, Settings, LayoutDashboard, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const sidebarItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
@@ -11,8 +14,31 @@ const sidebarItems = [
 ];
 
 export default function Sidebar({ activePath }: { activePath: string }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <aside className="w-64 bg-white border-r border-slate-200 flex flex-col flex-shrink-0">
+    <>
+      {/* Mobile toggle */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="md:hidden fixed top-3 left-3 z-50 p-2 bg-white border border-slate-200 rounded-lg shadow-sm"
+      >
+        {open ? <X size={20} /> : <Menu size={20} />}
+      </button>
+
+      {/* Overlay */}
+      {open && (
+        <div
+          className="md:hidden fixed inset-0 bg-black/30 z-30"
+          onClick={() => setOpen(false)}
+        />
+      )}
+
+      <aside
+        className={`w-64 bg-white border-r border-slate-200 flex flex-col flex-shrink-0 fixed md:static inset-y-0 left-0 z-40 transform transition-transform duration-200 ${
+          open ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        }`}
+      >
       <div className="p-5 border-b border-slate-100">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-200">
@@ -64,5 +90,6 @@ export default function Sidebar({ activePath }: { activePath: string }) {
         </div>
       </div>
     </aside>
+    </>
   );
 }
